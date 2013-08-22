@@ -51,4 +51,7 @@ class Sudoku(object):
         self.U2 = np.hstack((self.B4, self.B5, self.B6))
         self.U3 = np.hstack((self.B7, self.B8, self.B9))
         self.U = np.vstack((self.U1, self.U2, self.U3))
+        # Some random permutations with roll
+        self.U = np.roll(self.U, self.size*random.choice(range(1,self.size+1)))
+
         print self.U
